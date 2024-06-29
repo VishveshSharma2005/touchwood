@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .btn-custom-black {
+            background-color: #ffc107;
+            border-color: black;
+            color: white;
+        }
+        .btn-custom-black:hover {
+            background-color: brown;
+            border-color: darkgray;
+        }
+        li .tel .add {
+            list-style-type: none;
+        }
+        i {
+            margin-right: 10px;
+        }
+        .add, .tel {
+            text-decoration: none;
+            color: black;
+        }
+        .page-main-wrapper {
+            flex: 1;
+            padding-top: 70px; /* Adjust to your navbar height */
+            min-height: calc(100vh - 70px - 50px); /* Full height minus navbar and footer height */
+        }
+        .g-3 {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="text-warning">TOUCH</span>WOOD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index15.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#register" id="login">Register/login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-main-wrapper">
+        <div class="contact_section_bg">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column">
+                        <div class="contact_widget_box mb-3">
+                            <h5><b>Registered Office</b></h5>
+                            <ul class="contact_info_list">
+                                <li><a class="add" href="#"><i class="bi bi-geo-alt-fill"></i> 25, Second Floor, Vitthal Street,<br> Nr Oakland, Highsink Road,<br> California, Usa. 756314</a></li>
+                                <li><a class="tel" href="tel:18003095960"><i class="bi bi-telephone-outbound-fill"></i>18003095960</a></li>
+                            </ul>
+                        </div>
+                        <div class="contact_feature_thumb"></div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card contact_form_part mt-5 mt-sm-0">
+                            <div class="card-body">
+                                <form class="row g-3" id="enquiry_forms" method="POST" action="submit.php" enctype="multipart/form-data" novalidate>
+                                    <div class="col-md-6">
+                                        <label class="form-label">First Name<sup class="mandatory_icon" title="Mandatory">*</sup></label>
+                                        <input type="text" name="first_name" class="form-control" placeholder="First Name" autocomplete="off" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Last Name<sup class="mandatory_icon" title="Mandatory">*</sup></label>
+                                        <input name="last_name" type="text" class="form-control" placeholder="Last Name" autocomplete="off" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email Address<sup class="mandatory_icon" title="Mandatory">*</sup></label>
+                                        <input name="email" type="email" id="email" class="form-control" placeholder="Email Address" autocomplete="off" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="mobile" class="form-label">Mobile Number<sup class="mandatory_icon" title="Mandatory">*</sup></label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">+91</div>
+                                            <input type="number" maxlength="10" placeholder="Mobile Number" class="form-control" id="mobile" name="mobile" autocomplete="off" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Password<sup class="mandatory_icon" title="Mandatory">*</sup></label>
+                                        <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off" required>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label">Address</label>
+                                        <textarea class="form-control" rows="3" name="address" placeholder="Address"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-custom-black float-end">SUBMIT</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white p-2 text-center">
+        <div class="container">
+            <p class="text-dark">All Right Reserved @touchwood.com</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb4Fz7mhG1erX96oWrPULUr9tq35L4Yxfp+AjUKsdfox/yVS9" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+eGhkh4=" crossorigin="anonymous"></script>
+
+    <script src="checkout.js"></script>
+
+    <script>
+        document.getElementById('enquiry_forms').addEventListener('submit', function(event) {
+            alert('Form submitted successfully');
+        });
+    </script>
+
+</body>
+
+</html>
